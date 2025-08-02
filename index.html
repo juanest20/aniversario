@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Un Año Contigo 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #ffe0ec);
+      color: #333;
+      text-align: center;
+      padding-bottom: 5rem;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      margin-top: 2rem;
+      color: #d63384;
+    }
+    p {
+      max-width: 700px;
+      margin: 1rem auto;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      padding: 0 1rem;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+    .gallery img {
+      width: 220px;
+      margin: 10px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    video {
+      width: 90%;
+      max-width: 600px;
+      margin-top: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    audio {
+      display: none;
+    }
+
+    /* Corazones flotantes */
+    .heart {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      opacity: 0.5;
+      animation: float 8s linear infinite;
+    }
+    .heart::before, .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+    .heart::before { top: -10px; left: 0; }
+    .heart::after { left: -10px; top: 0; }
+
+    @keyframes float {
+      0% { bottom: 0; opacity: 0.7; }
+      100% { bottom: 100%; opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="musica/perfect.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <h1>Feliz 1er Aniversario, Mi Amor ❤️</h1>
+
+  <p>
+    Hoy celebramos nuestro primer año juntos. Un año lleno de aventuras y bonitas experiencias a tu lado. <br>
+    Gracias por tu amor, tu risa, tus abrazos, tus mensajes y cada momento que hemos compartido. <br>
+    Eres mi persona favorita, mi paz, mi compañera y mi sueño hecho realidad. <br>
+    Este es solo el comienzo de nuestra historia, y estoy feliz de escribirla contigo. <br><br>
+    ¡Te quiero infinitamente! 💕
+  </p>
+
+  <div class="gallery">
+    <img src="fotos/foto1.jpg" alt="Nosotros 1">
+    <img src="fotos/foto2.jpg" alt="Nosotros 2">
+    <img src="fotos/foto3.jpg" alt="Nosotros 3">
+    <img src="fotos/foto4.jpg" alt="Nosotros 4">
+    <img src="fotos/foto6.jpg" alt="Nosotros 6">
+    <img src="fotos/foto7.jpg" alt="Nosotros 7">
+    <img src="fotos/foto8.jpg" alt="Nosotros 8">
+    <img src="fotos/foto9.jpg" alt="Nosotros 9">
+    <img src="fotos/foto10.jpg" alt="Nosotros 10">
+    <img src="fotos/foto11.jpg" alt="Nosotros 11">
+    <!-- Puedes agregar más fotos -->
+  </div>
+
+  <video controls>
+    <source src="videos/video1.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+  </video>
+
+  <!-- corazones animados -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (4 + Math.random() * 5) + 's';
+      document.body.appendChild(heart);
+    }
+  </script>
+
+</body>
+</html>
